@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <!-- 
+        <readonly="readonly"> : 입력 양식 값을 수정할 수 없도록 비활성화, 값을 전송 위치(action)로 보냄
+        <disabled="disabled"> : 입력 양식 값을 수정할 수 없도록 비활성화, 값을 server단으로 넘기지 않음
+         -->
+
+<form action="readonly.jsp">
+	<input type="hidden" name="id" value=1234>
+	readonly--> <input type=text name="id01" value="1234" readonly="readonly"><br>
+	disabled--> <input type=text name="id02" value="1234" disabled><br>
+	<input type=submit  value="전송"><br>
+
+</form>
+
+
+
+
+</body>
+</html>
