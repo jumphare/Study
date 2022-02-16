@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//매개변수 있는 함수
+function ask(question){
+	var result=confirm(question);
+	if(result){
+		return "찬성";
+	} else {
+		return "반대";
+	}
+}
+</script>
+</head>
+<body>
+<script>
+   var result=ask("찬성하면 확인, 반대하면 취소");
+   alert(result);
+</script>
+</body>
+</html>

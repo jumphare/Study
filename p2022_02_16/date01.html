@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+//Date 클래스로 현재 시간 구하기
+
+var t=new Date(); //Date 객체 생성
+var y=t.getFullYear(); //연
+var m=t.getMonth(); //월 (0~11이므로 +1해서 출력해야 함)
+var d=t.getDate(); //일
+
+var h=t.getHours(); //시
+var mm=t.getMinutes(); //분
+var s=t.getSeconds(); //초
+
+var w=t.getDay(); //요일
+var week=['일','월','화','수','목','금','토'];
+
+
+document.write("현재 시간은 "+y+"년 "+(m+1)+"월 "+d+"일<br>");
+document.write(week[w]+'요일 '+h+"시 "+mm+"분 "+s+"초 입니다.<br>");
+
+</script>
+</body>
+</html>

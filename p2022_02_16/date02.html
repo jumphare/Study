@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function show(){
+	var t=new Date(); //Date 객체 생성
+	var y=t.getFullYear(); //연
+	var m=t.getMonth(); //월 (0~11이므로 +1해서 출력해야 함)
+	var d=t.getDate(); //일
+	
+	var h=t.getHours(); //시
+	var mm=t.getMinutes(); //분
+	var s=t.getSeconds(); //초
+	
+//브라우저 상태 표시줄에 출력
+	window.status=y+"-"+(m+1)+"-"+d+"   "+h+":"+mm+":"+s;
+	
+	w=setTimeout("show()",1000); //초마다 시간 업데이트
+}
+function stop(){
+	clearTimeout(w);
+}
+</script>
+</head>
+<!-- <body onLoad="show()"> -->
+<body>
+<input type=button value="Start" onClick="show()">
+<input type=button value="Stop" onClick="stop()">
+
+<img src="img/clock.jpg" onMouseOver="show()" onMouseOut="stop()">
+
+<script>
+
+</script>
+</body>
+</html>

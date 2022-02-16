@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var n1=prompt("정수1");  //값 받아서 버튼 누르면 연산을 해야 하니까
+var n2=prompt("정수2");  //헤더에 미리 변수를 정의해두는 것!
+
+n1=Number(n1);
+n2=Number(n2);
+
+function sum(){
+	alert(n1+n2);
+}
+function sub(){
+	alert(n1-n2);
+}
+function mul(){
+	alert(n1*n2);
+}
+function div(){
+	alert(n1/n2);
+}
+</script>
+</head>
+<body>
+<script>
+ document.write("입력받은 값1= "+n1+"<br>입력받은 값2="+n2);
+ </script>
+<form>
+	<input type=button value="  +  " onClick=sum()>
+	<input type=button value="  -  " onClick=sub()>
+	<input type=button value="  *  " onClick=mul()>
+	<input type=button value="  /  "  onClick=div()>
+</form>
+</body>
+</html>
