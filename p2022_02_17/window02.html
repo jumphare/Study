@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var w1; //open() 받을 전역변수
+function winopen(){
+	w1=window.open("date01.html","Mywin","width=200, height=200, left=100, top=100");
+	w2=window.open("calculator.html","Mycal","width=200, height=200, left=300, top=100")
+}
+
+function winclose(){
+	w1.close();
+	w2.close();
+}
+
+</script>
+
+<input type=button value="OPEN" onClick="winopen()">
+<input type=button value="CLOSE" onClick="winclose()">
+
+
+</body>
+</html>
