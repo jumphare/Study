@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>게시판</title>
+
+<script src="board.js"></script>
+
+</head>
+<body>  
+  
+	<form method="post" action="board.jsp" onSubmit="return check()">
+		<table border=1 width=500 align="center">
+			<caption>게시판</caption>
+			<tr>
+				<th>작성자</th>
+				<td><input type="text" size=30 name="writer" id="writer"
+					placeholder="작성자명 입력"></td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td><input type="password" size=30 name="passwd" id="passwd"
+					placeholder="2~8자 입력"></td>
+			</tr>
+			<tr>
+				<th>제목</th>
+				<td><input type="text" size=50 name="subject" id="subject"
+					placeholder="50자 이내 입력"></td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td><textarea rows="5" cols="50" name="content" id="content"
+						placeholder="내용을 입력하세요"></textarea>
+			<tr>
+				<th>파일첨부</th>
+				<td><input type=file name="myfile" id="myfile"></td>
+			</tr>
+			<tr>
+				<td colspan=2 align=center>
+				<input type="submit" value="작성" >
+					<input type="reset" value="취소">
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>
