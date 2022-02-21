@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function post(){
+	  window.open("","post",
+		   	      "width=200,height=300,scrollbars=yes");
+	}
+</script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script>
+	function openDaumPostcode() {
+		new daum.Postcode({
+			oncomplete : function(data) {
+				// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+				// 우편번호와 주소 정보를 해당 필드에 넣고, 커서를 상세주소 필드로 이동한다.
+//				document.getElementById('join_zip1').value = data.postcode1;
+//				document.getElementById('join_zip2').value = data.postcode2;
+				document.getElementById('join_zip1').value = data.zonecode;
+				document.getElementById('join_addr1').value = data.address;
+				
+			}
+		}).open();
+	}
+</script>
+
+
+</head>
+<body>
+<form>
+우편번호:<input type=text size=5 maxlength=5 id="join_zip1">		
+<input type=button value="우편검색" 
+	   onClick="openDaumPostcode()"><br>
+주소:<input type=text size=60 id="join_addr1">
+
+</form>
+</body>
+</html>
